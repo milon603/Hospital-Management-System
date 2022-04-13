@@ -1,0 +1,342 @@
+@import 'styles.css';
+.Doctor_list{
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	padding-right: 50px;
+	overflow-x: auto;
+}
+.body .content{
+	width: 100%;
+}
+.body .content .removeDt{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #1a05;
+	visibility: hidden;
+	height: 0px;
+}
+.body .content .removeDt .Id{
+	width: 300px;
+	   height: 40px;
+	   font-weight: 600;
+	   background:none;
+	   margin: 5px 0;
+	   outline: none;
+	   padding-left: 15px;
+	   padding-right: 15px;
+	   font-size: 20px;
+	   align-items: center;
+	   box-shadow: inset 4px 4px 8px 0 rgba(9,11,15,0.7),inset -4px -4px 8px 0 rgb(46,59,66);
+	   border-radius: 20px;
+}
+.body .content .removeDt .DtBtn{
+	margin-left: 20px;
+}
+.body .content .Dt_head{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 20px;
+}
+.body .content .Dt_head .search{
+	width: calc(100% - 450px);
+}
+.body .Doctor_add{
+	height: 80vh;
+	width: 0px;
+	background: #1a05;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	visibility: hidden;
+}
+.body .Doctor_add h1{
+   font-size: 30px;
+   margin-top: 1rem;
+}
+.body .Doctor_add form label{
+	font-size: 20px;
+}
+.body .Doctor_add form .Id_name{
+	display: flex;
+	align-items: center;
+    justify-content: space-between;
+    margin-top: -2rem;
+}
+.body .Doctor_add form .Id{
+	padding-right: 20px;
+}
+.body .Doctor_add form .Id_name .name{
+	padding-right:80px;
+
+}
+.body .Doctor_add form :is(.Id_name,.spec_time,.Day .Day_txt) input{
+	width: 300px;
+	   height: 40px;
+	   background:none;
+	   margin: 5px 0;
+	   outline: none;
+	   padding-left: 15px;
+	   padding-right: 15px;
+	   font-size: 20px;
+	   align-items: center;
+	   box-shadow: inset 4px 4px 8px 0 rgba(9,11,15,0.7),inset -4px -4px 8px 0 rgb(46,59,66);
+	   border-radius: 20px;
+}
+.body .Doctor_add form .spec_time{
+	width: 100%;
+	
+}
+.body .Doctor_add form .spec_time .fee{
+	padding-left: 10px;
+}
+.body .Doctor_add form .spec_time .fee input{
+	width: 100px;
+	height: 40px;
+}
+.body .Doctor_add form .spec_time{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.body .Doctor_add form .Day{
+	width: 100%;
+	padding-left: 10px;
+}
+.body .Doctor_add form .Day .Day_txt input{
+      width: calc(100% - 130px);
+}
+.body .Doctor_add form .Day .Days input{
+   height: 40px;
+   width: 150px;
+   background: none;
+   margin: 10px 0;
+   outline: none;
+   padding-left: 15px;
+	padding-right: 15px;
+	font-size: 20px;justify-content: center;
+	align-items: center;
+	box-shadow:  4px 4px 8px 0 rgba(9,11,15,0.7),-4px -4px 8px 0 rgb(46,59,66);
+   border-radius: 10px;
+}
+.body .Doctor_add form .Day .Days input:hover{
+	background: #009578;
+}
+.body .Doctor_add form .time{
+	width: 100%;
+	display: flex;
+}
+.body .Doctor_add form .time .stTime,.EndTime{
+	padding-right: 10px;
+	padding-left: 10px;
+	width: 50%;
+}
+.radio{
+	display: inline-flex;
+	overflow: hidden;
+	border-radius: 15px;
+	box-shadow: 0 0 5px rgba(0,0,0,.25);
+}
+.radio_input{
+	display: none;
+}
+.radio_labbel{
+	padding: 8px 14px;
+	font-size: 20px;
+	color: #ffffff;
+	background: #009578;
+	cursor: pointer;
+	transition: background .1s;
+}
+.radio_labbel:not(:last-of-type){
+	border-right: 1px solid #006856;
+}
+.radio_input:checked + .radio_labbel{
+	background: #006856;
+}
+.body .Doctor_add form .time .stTime .lft input,.body .Doctor_add form .time .EndTime .lft input{
+	 height: 40px;
+   width: 100px;
+   background: none;
+   margin: 10px 0;
+   outline: none;
+   padding-left: 15px;
+	padding-right: 15px;
+	font-size: 20px;
+	justify-content: center;
+	align-items: center;
+	box-shadow:inset  4px 4px 8px 0 rgba(9,11,15,0.7),inset -4px -4px 8px 0 rgb(46,59,66);
+   border-radius: 10px;
+}
+.body .Doctor_add form .file{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	padding: 0 20px;
+	padding-bottom: 10px;
+}
+
+.body .serial .search{
+	padding: 0 50px;
+}
+.body .serial .search input{
+	width:calc(100% - 150px);
+}
+
+/************ Admin *********************/
+.Admin{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    flex-direction: column;
+    visibility: hidden;width:0px; 
+}
+.Admin .Dt_head{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding: 0 20px;
+}
+.Admin .Dt_head .remove_ad{
+	margin-left:auto;
+}
+.Admin::-webkit-scrollbar{
+ width: 0px;
+}
+.Admin .tableContant{
+	width: 80%;
+	border-collapse: collapse;
+     margin:  25px 20px;
+	font-size: .9rem;
+	min-width: 400px;
+	border-radius: 5px 5px 0 0;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+.Admin .tableContant thead tr{
+	background: #009879;
+	color: #ffffff;
+	text-align: left;
+	font-weight: bold;
+}
+.Admin .tableContant th, td{
+ 	padding: 12px 15px;
+}
+.Admin .tableContant tbody tr:nth-of-type(even){
+	background: #f3f3f3;
+	font-weight: bold;
+	color: #009879;
+}
+
+.body .Admin .removeDt{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #1a05;
+	visibility: hidden;
+	width: 100%;
+	height: 0px;
+}
+.body .Admin .removeDt .Id{
+	width: 300px;
+	   height: 40px;
+	   font-weight: 600;
+	   background:none;
+	   margin: 5px 0;
+	   outline: none;
+	   padding-left: 15px;
+	   padding-right: 15px;
+	   font-size: 20px;
+	   align-items: center;
+	   box-shadow: inset 4px 4px 8px 0 rgba(9,11,15,0.7),inset -4px -4px 8px 0 rgb(46,59,66);
+	   border-radius: 20px;
+}
+.body .Admin .removeDt .DtBtn{
+	margin-left: 20px;
+}
+.body .Admin .AddAd{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #1a05;
+	visibility: hidden;
+	width: 100%;
+	height: 0px;
+}
+.body .Admin .AddAd .Id{
+	width: 300px;
+	   height: 40px;
+	   font-weight: 600;
+	   background:none;
+	   margin: 5px 0;
+	   outline: none;
+	   padding-left: 15px;
+	   padding-right: 15px;
+	   font-size: 20px;
+	   align-items: center;
+	   box-shadow: inset 4px 4px 8px 0 rgba(9,11,15,0.7),inset -4px -4px 8px 0 rgb(46,59,66);
+	   border-radius: 20px;
+}
+.body .Admin .AddAd .DtBtn{
+	margin-left: 20px;
+}
+/***********************8 user 8*****************/
+section .body .user{
+	height: 80vh;
+	display: flex;
+	flex-direction: column;
+	margin-left: auto;
+	align-items: center;
+	justify-content: center;
+	padding-top: 20px;
+	background:#fff;
+	width:0px;
+	visibility: hidden;
+	box-shadow: 0px 0px 128px 0px rgba(0,0,0,0.1),0 32px 64px -48px rgba(0,0,0,0.5);
+}
+section .body .user header,.user-list a{
+	display: flex;
+	align-items: center;
+	padding-bottom: 20px;
+	justify-content:space-between;
+	border-bottom: 1px solid #e6e6e6;
+}
+:is(.user, .user-list) .conten{
+	display: flex;
+	align-items: center;
+}
+section .body .user header .conten img{
+   height: 50px;
+   width: 50px;
+}
+section .body .user img{
+	object-fit: cover;
+	border-radius: 50%;
+}
+:is(.user, .user-list) .details{
+	margin-left: 15px;
+	color: #000;
+}
+:is(.user, .user-list) .details span{
+	font-size: 18px;
+	font-weight: 500;
+}
+.user-list{
+	width: 100%;
+	padding-left: 20px;
+	padding-right: 20px;
+	overflow-y: auto;
+}
+.user-list::-webkit-scrollbar{
+	width:0px;
+}
+.user-list a{
+	page-break-after: 10px;
+	border-bottom-color: #f1f1f1;
+}
+.user-list a .conten p{
+	color: #67676a;
+}
